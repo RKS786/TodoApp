@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/e9fcc18b14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="todo-container">
+        <div class="todo-content">
+            <div class="todo-textbox-container">
+                <input type="text" id="task" class="add-task-input" placeholder="Add a new task...">
+                <i id="add" class="fa-solid fa-plus fa-lg"></i>
+            </div>
+            <ul id="list"></ul>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    <span id="taskCount">0</span>
+                </div>
+                <div class="item-statuses">
+                    <span class="active">All</span>
+                    <span class="activeT">Active</span>
+                    <span class="completedT">Completed</span>
+                </div>
+                <div class="items-clear" onclick="removeChecked()">
+                    <span>Clear completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
