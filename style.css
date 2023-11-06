@@ -24,7 +24,12 @@ body {
     padding: 20px;
     margin: 15px 0;
 }
-
+.title{
+text-align: center;
+    color: #76818d;
+    font-size: larger;
+    margin-top: -25px;
+}
 
 .todo-textbox-container {
     display: flex;
