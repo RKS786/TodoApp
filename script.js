@@ -24,23 +24,6 @@ function getCompletedTaskLength() {
   return completedItems.length;
 }
 
-function fetchTodos() {
-    const storedTasks = localStorage.getItem("todoList");
-
-    if (storedTasks) {
-        tasks = JSON.parse(storedTasks);
-        let activeTask = getActiveTaskLength();
-        let completedTasks = getCompletedTaskLength();
-        const activeT = document.querySelector(".activeT");
-        const completedT = document.querySelector(".completedT");
-        activeT.innerText = `Active (${activeTask})`;
-        completedT.innerText = `Completed (${completedTasks})`;
-        renderList();
-    } else {
-        console.log("No tasks found in local storage.");
-    }
-}
-
 function renderList(){
 
     taskList.innerHTML ='';
@@ -139,7 +122,7 @@ function removeChecked() {
   renderList();
 }
 
-function handleKeyPressEventListener(){
+function handleAddIconEventListener(){
     
         const text = taskInput.value;
         console.log(text);
@@ -179,8 +162,8 @@ function handleKeyPressEventListener(){
 
     function initializeApp() {
 
-        fetchTodos();
-        addTaskIcon.addEventListener('click', handleKeyPressEventListener);
+        renderList();
+        addTaskIcon.addEventListener('click', handleAddIconEventListener);
         document.addEventListener('click', handleClickEventListener);
     }
 
