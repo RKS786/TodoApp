@@ -12,7 +12,7 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
-    background-color: #f2f2f2; /* Container background color */
+    background-color: lightseagreen; /* Container background color */
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
